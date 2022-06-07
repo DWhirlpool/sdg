@@ -1,0 +1,87 @@
+/* Text color */
+.text-custom,
+.pagination li a:hover,
+.pagination .active a,
+.page-next-level .page-next li a:hover,
+.nav-pills .nav-link,
+.faq-content .card a.faq[data-toggle=collapse],
+#topnav .has-submenu.active .submenu li.active > a,
+#topnav .has-submenu.active a,
+#topnav .navigation-menu > li .submenu li a:hover,
+#topnav .navigation-menu .has-submenu .submenu > li:hover > a,
+#topnav .navigation-menu > li:hover > a,
+#topnav .navigation-menu > li > a:hover,
+#topnav .navigation-menu > li .submenu li a:hover,
+#topnav .navigation-menu > li .submenu .has-submenu.open > a,
+#topnav .navigation-menu > li .submenu .has-submenu.open > a .has-submenu.open > a,
+#topnav .navigation-menu .menu-extras .menu-item .search > a:hover,
+#topnav .has-submenu.active a,
+.about-section .about-content .listing-about i,
+.services .heading a:hover,
+.services.service-two:hover .serv-head,
+.post .post-content a:hover,
+.post .comment-area .media-list .media .media-body a:hover,
+.post .comment-area .media-list .media .media-body .media-heading a:hover,
+.sidebar .widget .post-recent .post-recent-content a:hover,
+.team-member .team-content .member-name a:hover,
+.team-member .member-detail .member-name a:hover,
+.portfolio-box .work-img .overlay-work .icon i:hover,
+.portfolio-box .work-img .overlay-work .work-content .title:hover a,
+.portfolio-box .gallary-title .title:hover a,
+.footer .footer-list li a:hover {
+    color: #2e9fd2 !important;
+}
+
+
+/* Background color */
+.bg-custom,
+.btn.btn-custom,
+.btn.btn-custom-white:hover, .btn.btn-custom-white:focus, .btn.btn-custom-white:active, .btn.btn-custom-white.active, .btn.btn-custom-white.focus,
+.btn.btn-outline-white:hover, .btn.btn-outline-white:focus, .btn.btn-outline-white:active, .btn.btn-outline-white.active, .btn.btn-outline-white.focus,
+.custom-control-input:checked ~ .custom-control-label::before,
+.progressbox .progress .progress-bar,
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link,
+.back-to-top:hover,
+.social-icon li a:hover,
+#preloader #status .spinner .cube1, #preloader #status .spinner .cube2,
+#topnav .navbar-toggle.open span:hover,
+.logo .icon,
+.flex-control-paging li a.flex-active,
+.about-section .project-video .play-icon,
+.services.service-three:hover .icon-2,
+.owl-theme .owl-controls .owl-page span,
+.pricing-tab.nav-pills .nav-link.active,
+.pricing-tab.nav-pills .show > .nav-link,
+.sidebar .widget .tagcloud > a:hover,
+.container-filter li a:hover, .container-filter li a.active ,.tab_list .current{
+    background-color: #2e9fd2 !important;
+}
+
+
+/* Border color */
+.btn.btn-custom-white:hover, .btn.btn-custom-white:focus, .btn.btn-custom-white:active, .btn.btn-custom-white.active, .btn.btn-custom-white.focus,
+.custom-control-input:checked ~ .custom-control-label::before,
+.social-icon li a:hover,
+#topnav .has-submenu.active .menu-arrow,
+#topnav .navigation-menu > li:hover > .menu-arrow,
+.pricing-tab,
+.container-filter li a:hover, .container-filter li a.active {
+    border-color: #2e9fd2 !important;
+}
+.page-triangle.triangle-custom:after {
+    border-top-color: #2e9fd2;
+  }
+.dropdown-menu,
+#topnav .navigation-menu > li.has-submenu:hover > .submenu,
+.custom-form .form-control:focus, .custom-form .form-control:active {
+    border-bottom-color: #2e9fd2 !important;
+}
+#topnav .navigation-menu > li.has-submenu:hover > .submenu > li.has-submenu:hover > .submenu {
+    border-top: #2e9fd2 !important;
+}
+
+.team-img img {
+    -webkit-box-shadow: -20px -20px 0px -5px #2e9fd2;
+            box-shadow: -20px -20px 0px -5px #2e9fd2;
+}
