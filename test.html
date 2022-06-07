@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="shortcut icon" href="./images/home/DICIU.jpg" type="image/x-icon" />
+    <meta charset="utf-8" />
+    <title>The SDG Games</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+      name="description"
+      content="The SDG Game"
+    />
+    <meta
+      name="keywords"
+      content="SDG, Game, Sustainable, Goals, Development, Sustainable Development Goals, UN, Untied Nations, 6L, Projects, Earth"
+    />
+    <meta content="xxx" name="author" />
+    <!-- FAVICON -->
+
+    <!-- BOOTSTRAP -->
+    <link
+      href="http://cdn.bootstrapmb.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- MAGNIFIC POPUP -->
+    <link href="css/magnific-popup.css" rel="stylesheet" type="text/css" />
+    <!-- ICON -->
+    <link
+      href="css/materialdesignicons.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link href="css/fontawesome.css" rel="stylesheet" type="text/css" />
+    <link href="css/pe-icon-7-stroke.css" rel="stylesheet" type="text/css" />
+    <!--OWL SLIDER-->
+    <link rel="stylesheet" href="css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="css/owl.theme.css" />
+    <link rel="stylesheet" href="css/owl.transitions.css" />
+    <link rel="stylesheet" href="css/slick-theme.css" />
+    <link rel="stylesheet" href="css/slick.css" />
+    <!-- Custom Css -->
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <link href="css/colors/default.css" rel="stylesheet" id="color-opt" />
+  </head>
+  <style>
+    /* html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+} */
+    .glow-on-reset {
+      width: 220px;
+      height: 50px;
+      border: none;
+      outline: none;
+      color: #fff;
+      /* background: #111; */
+      cursor: pointer;
+      position: relative;
+      z-index: 0;
+      border-radius: 10px;
+    }
+    .glow-on-hover {
+      width: 220px;
+      height: 50px;
+      border: none;
+      outline: none;
+      color: #fff;
+      /* background: #111; */
+      cursor: pointer;
+      position: relative;
+      z-index: 0;
+      border-radius: 10px;
+    }
+    .content span {
+      font-size: 14px;
+    }
+    .glow-on-hover:before {
+      content: '';
+      background: linear-gradient(
+        45deg,
+        #ff0000,
+        #ff7300,
+        #fffb00,
+        #48ff00,
+        #00ffd5,
+        #002bff,
+        #7a00ff,
+        #ff00c8,
+        #ff0000
+      );
+      position: absolute;
+      top: -2px;
+      left: -2px;
+      background-size: 400%;
+      z-index: -1;
+      filter: blur(5px);
+      width: calc(100% + 4px);
+      height: calc(100% + 4px);
+      animation: glowing 20s linear infinite;
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+      border-radius: 10px;
+    }
+
+    .glow-on-hover:active {
+      /* color: #000; */
+    }
+
+    .glow-on-hover:active:after {
+      background: transparent;
+    }
+
+    .glow-on-hover:hover:before {
+      opacity: 1;
+    }
+
+    .glow-on-hover:after {
+      z-index: -1;
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      /* background: #111; */
+      left: 0;
+      top: 0;
+      border-radius: 10px;
+    }
+
+    @keyframes glowing {
+      0% {
+        background-position: 0 0;
+      }
+      50% {
+        background-position: 400% 0;
+      }
+      100% {
+        background-position: 0 0;
+      }
+    }
+
+    /* * {
+      margin: 0;
+      padding: 0;
+      outline: 0;
+    }
+    html {
+      font-size: 62.5%;
+    }
+    body {
+      font-size: 1.2rem;
+      color: #666;
+      font-family: 'Helvetica';
+    } */
+    li {
+      list-style: none;
+    }
+    h2 {
+      font-size: 16px;
+      /* font-weight: normal; */
+      color: #333;
+    }
+    input[type='radio'],
+    input[type='checkbox'] {
+      /* -webkit-appearance: none;
+      display: block;
+      float: left; */
+    }
+    input[type='radio'] {
+      /* border: 1px solid #999;
+      border-radius: 50%;
+      width: 2rem;
+      height: 2rem; */
+      margin: 3px 10px 0 0;
+    }
+    /* input[type='radio']:checked {
+      background: #777;
+    } */
+    /* input[type="checkbox"]{background:url(images/checkbox.png) no-repeat center top / 1.2rem 1.2rem;1.2rem;height:1.2rem;margin:6px 10px 0 0;} */
+    input[type='checkbox']:checked {
+      background: url(images/checkbox_checked.png) no-repeat center top / 1.2rem
+        1.2rem;
+    }
+    .questionnaire {
+      padding: 1rem 1.5rem;
+    }
+    .questionnaire .content {
+      margin-top: 0.5rem;
+    }
+    /* .content li{float:left;50%;height:2.2rem;line-height:2.2rem;} */
+    .content ul {
+      overflow: hidden;
+      margin-top: 0.5rem;
+    }
+    /* .content_seven li{100%;} */
+    /* .content_other textarea{resize:none;98%;padding-left:2%;height:6.4rem;margin-top:1rem;line-height:2rem;} */
+    /* #submit{100%;height:3rem;color:#fff;background:#9f9f9f;margin:3rem 0 2.7rem;border:0;} */
+  </style>
+  <body>
+    <!-- Loader -->
+    <div id="preloader">
+      <div id="status">
+        <div class="spinner">
+          <div class="cube1"></div>
+          <div class="cube2"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navigation Bar-->
+    <header id="topnav" class="defaultscroll fixed-top navbar-sticky sticky">
+      <div class="container">
+        <!-- Logo container-->
+        <div>
+          <a href="index.html" class="logo">
+            <div class="icon d-inline-block">
+              <img src="images/icon-logo.png" alt="missing_logo" height="20" />
+            </div>
+            The SDG Game
+          </a>
+        </div>
+        <!-- End Logo container-->
+        <div class="menu-extras">
+          <div class="menu-item">
+            <!-- Mobile menu toggle-->
+            <a class="navbar-toggle">
+              <div class="lines">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </a>
+            <!-- End mobile menu toggle-->
+          </div>
+        </div>
+
+        <div id="navigation">
+          <!-- Navigation Menu-->
+          <ul class="navigation-menu">
+            <li class="has-submenu"><a href="./index.html">Home</a></li>
+            <li class="has-submenu">
+              <a href="./game.html">Game</a>
+            </li>
+            <li class="has-submenu">
+              <a href="./test.html">Test</a>
+            </li>
+            <li class="has-submenu">
+              <a href="./knowledge.html">Knowledge</a>
+            </li>
+          </ul>
+          <!-- End navigation menu-->
+        </div>
+      </div>
+    </header>
+    <!-- End Navigation Bar-->
+
+    <!-- Feature Start -->
+    <section class="section">
+      <div class="container pt-5">
+<center><img src="./images/Home/giphy.gif" width="300" height="300" /> </center>
+      </div>
+      <!--end container-->
+    </section>
+    <!--end section-->
+    <!-- Feature End -->
+
+    <div class="container">
+      <div class="row align-items-center mt-5" style="display: block">
+        <!--end col-->
+        <div class="section-title mb-0">
+          <h3 class="title text-capitalize mb-3 text-center">This is My Quiz</h3>
+          <p class="text-muted">
+            This is my spectacular quiz. When you reload it, it would change some of the questions. This is because I want to keep you entertained. When you click the submit button, a score board would pop up below all of the questions. Make sure to score down!!!
+          </p>
+        </div>
+      </div>
+      <!--end col-->
+    </div>
+    <section class="section">
+      <div class="container">
+        <form id="testForm" class="mb-5">
+          <div class="questionnaire"></div>
+          <button
+            class="glow-on-hover bg-custom"
+            type="button"
+            id="submit"
+            onclick="clickSubmit()"
+          >
+            Submit
+          </button>
+          <button
+            class="glow-on-reset"
+            style="background: #999"
+            type="reset"
+            id="reset"
+            onclick="clickReset()"
+          >
+            Reset
+          </button>
+        </form>
+        <div id="result" class="mt-5"></div>
+      </div>
+    </section>
+    <!-- Style switcher -->
+    <div
+      id="style-switcher"
+      class="shadow"
+      style="left: 0px"
+      class="p-3 pt-2 pb-2"
+    >
+      <h3 class="title text-center">Select your color</h3>
+      <ul class="pattern">
+        <li>
+          <a class="default" href="#"></a>
+        </li>
+        <li>
+          <a class="blue" href="#"></a>
+        </li>
+        <li>
+          <a class="yellow" href="#"></a>
+        </li>
+        <li>
+          <a class="dark-pink" href="#"></a>
+        </li>
+        <li>
+          <a class="orange" href="#"></a>
+        </li>
+        <li>
+          <a class="brown" href="#"></a>
+        </li>
+        <li>
+          <a class="green" href="#"></a>
+        </li>
+        <li>
+          <a class="purple" href="#"></a>
+        </li>
+        <li>
+          <a class="firozi" href="#"></a>
+        </li>
+      </ul>
+      <div class="bottom">
+        <a href="#" class="settings shadow"
+          ><i class="mdi mdi-settings mdi-spin text-custom"></i
+        ></a>
+      </div>
+    </div>
+    <!-- end Style switcher -->
+
+    <!-- Back to top -->
+    <a href="#" class="back-to-top rounded text-center" id="back-to-top">
+      <i class="mdi mdi-chevron-up d-block"> </i>
+    </a>
+    <!-- Back to top -->
+    <script src="js/zepto.min.js"></script>
+
+    <!-- javascript -->
+    <script src="js/jquery.min.js"></script>
+    <script src="http://cdn.bootstrapmb.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="js/menu.js"></script>
+    <!-- Magnific Popup -->
+    <script src="js/jquery.magnific-popup.min.js "></script>
+    <!-- SLIDER -->
+    <script src="js/owl.carousel.min.js "></script>
+    <script src="js/owlcarousel.init.js "></script>
+    <script src="js/slick.min.js "></script>
+    <script src="js/slick.init.js "></script>
+    <!-- PARALLAX -->
+    <script src="js/parallax.js"></script>
+    <!-- Switcher -->
+    <script src="js/switcher.js"></script>
+    <!-- Main Js -->
+    <script src="js/app.js"></script>
+    <script>
+      var questions = [
+        {
+          id: 1,
+          type: 'radio',
+          title: 'When should the SDG be acheived?',
+          right: 'B',
+          answer: [
+            { id: 'A', text: '2067' },
+            { id: 'B', text: '2030' },
+            { id: 'C', text: '2050' },
+            { id: 'D', text: '2500' }
+          ]
+        },
+                {
+          id: 2,
+          type: 'radio',
+          title: 'When did the SDG start?',
+          right:'C',
+          answer: [
+            { id: 'A', text: '1978' },
+            { id: 'B', text: '2010' },
+            { id: 'C', text: '2015' },
+            { id: 'D', text: '1867' }
+          ]
+        },
+                {
+          id: 3,
+          type: 'radio',
+          title: 'What does SDG stand for?',
+          right:'C',
+          answer: [
+            { id: 'A', text: 'Supreme Doggy Goverment' },
+            { id: 'B', text: 'Salad Development Goals' },
+            { id: 'C', text: 'Sustainable Development Goals' },
+            { id: 'D', text: 'Sock Development Goals' }
+          ]
+        },
+                        {
+          id: 4,
+          type: 'radio',
+          title: 'Who started the SDGs?',
+          right:'D',
+          answer: [
+            { id: 'A', text: 'Steve Jobs' },
+            { id: 'B', text: 'Elon Musk' },
+            { id: 'C', text: 'Mr. Beast' },
+            { id: 'D', text: 'UN' }
+          ]
+        },
+                        {
+          id: 5,
+          type: 'radio',
+          title: 'Which of the below is NOT a SDG?',
+          right:'A',
+          answer: [
+            { id: 'A', text: 'Wine for all' },
+            { id: 'B', text: '0 Hunger' },
+            { id: 'C', text: 'No Provety' },
+            { id: 'D', text:'Equal Rights'}
+          ]
+        },
+        {
+          id: 6,
+          type: 'radio',
+          title: 'Which of the below IS a SDG?',
+          right:'C',
+          answer: [
+            { id: 'A', text: 'Wine for all' },
+            { id: 'B', text: 'Piano Lessons for all' },
+            { id: 'C', text: 'No Provety' },
+            { id: 'D', text:'Inequal Rights'}
+          ]
+        },
+        {
+          id: 7,
+          type: 'radio',
+          title: 'Which of the below supports "Love Nature?"',
+          right:'A',
+          answer: [
+            { id: 'A', text: 'No Poaching' },
+            { id: 'B', text: '0 Hunger' },
+            { id: 'C', text: 'Equal rights for women and men' },
+            { id: 'D', text:'Devices at every school'}
+          ]
+        },
+        {
+          id: 8,
+          type: 'radio',
+          title: 'Which SDG Supports Peace?',
+          right:'C',
+          answer: [
+            { id: 'A', text: '5' },
+            { id: 'B', text: '17' },
+            { id: 'C', text: '16' },
+            { id: 'D', text:'1'}
+          ]
+        },
+        {
+          id: 9,
+          type: 'radio',
+          title: 'How many SDGs are there?',
+          right:'A',
+          answer: [
+            { id: 'A', text: '17' },
+            { id: 'B', text: '100' },
+            { id: 'C', text: '10' },
+            { id: 'D', text:'24'}
+          ]
+        },
+                {
+          id: 10,
+          type: 'radio',
+          title: 'Which action supports 0 Hunger?',
+          right:'A',
+          answer: [
+            { id: 'A', text: 'Food for all' },
+            { id: 'B', text: 'No Poaching' },
+            { id: 'C', text: 'Use Lamps for the rest of your life' },
+            { id: 'D', text:'None of the above'}
+          ]
+        },
+                {
+          id: 11,
+          type: 'radio',
+          title: 'Is the SDG important?',
+          right:'A',
+          answer: [
+            { id: 'A', text: 'Yes' },
+            { id: 'B', text: 'Mabye' },
+            { id: 'C', text: 'No' },
+          ]
+        },
+        {
+          id: 12,
+          type: 'radio',
+          title: 'Who Supports the SDGs?',
+          right:'B',
+          answer: [
+            { id: 'A', text: 'Mr.Beast' },
+            { id: 'B', text: 'Everyone' },
+            { id: 'C', text: 'David Attenborough' },
+          ]
+        },
+                {
+          id: 13,
+          type: 'radio',
+          title: 'Which source of energy is the most unsustainable?',
+          right:'D',
+          answer: [
+            { id: 'A', text: 'Hydro Power' },
+            { id: 'B', text: 'Solar Power' },
+            { id: 'C', text: 'Wind Power' },
+            { id: 'D', text:'Fossil Fuel'}
+          ]
+        },
+                {
+          id: 14,
+          type: 'radio',
+          title: 'Who is responisble if the SDG is not acheived?',
+          right:'C',
+          answer: [
+            { id: 'A', text: 'UN' },
+            { id: 'B', text: 'Mr. Beast' },
+            { id: 'C', text: 'Everyone' },
+            { id: 'D', text:'Trump'}
+          ]
+        },
+                {
+          id: 15,
+          type: 'radio',
+          title: 'How do you like the SDGs',
+          right:'A',
+          answer: [
+            { id: 'A', text: 'I love it' },
+            { id: 'B', text: 'So So' },
+            { id: 'C', text: 'I do not like it'},
+            { id: 'D', text:'I 100% Hate it'}
+          ]
+        },
+      ]
+      var questionnaire = document.querySelector('.questionnaire')
+      $(function () {
+        $(".content input[name^='radio']").click(function () {
+          //input[name='radio'] 单选按钮只要被点击且不管你点它多少次  他的选中状态都是true
+          $(this)
+            .parent('li')
+            .addClass('checked')
+            .siblings('li')
+            .removeClass('checked')
+            .parents('.content')
+            .attr('data-id', 'checkBox')
+
+          var contentLen = $('.content').length
+          var checkLen = $("div[data-id='checkBox']").length
+
+          checked(contentLen, checkLen)
+        })
+
+        function checked(contentLen, checkLen) {
+          if (contentLen == checkLen) {
+            $('#submit').addClass('bg-success').removeAttr('disabled')
+          } else {
+            $('#submit')
+              .css({ background: '#9f9f9f' })
+              .attr('disabled', 'disabled')
+          }
+        }
+      })
+
+      function clickSubmit(e) {
+        let data = $('#testForm').serialize().split('&')
+        const yourAnswer = []
+        const rightAnswer = []
+        if (data.length) {
+          data.map((item) => yourAnswer.push(item.charAt(item.length - 1)))
+        }
+
+        testData.map((item) => rightAnswer.push(item.right))
+        let allAnswer = ''
+        testData.map((item, index) => {
+          allAnswer += `<div>
+                  <h2>${index + 1}、 ${testData[index].title}</h2>
+                  <span>My Answer：${yourAnswer[index]}</span></br>
+                  <span>Correct Answer：${rightAnswer[index]}</span>
+                </br>
+                </br>
+                  </div>`
+          return
+        })
+
+        $('#result').html(allAnswer)
+      }
+      const testData = getRandomArrayElements(questions, 5)
+      function getRandomArrayElements(arr, count) {
+        var shuffled = arr.slice(0), i = arr.length, min = i - count, temp, index;
+        while (i-- > min) {
+            index = Math.floor((i + 1) * Math.random());
+            temp = shuffled[index];
+            shuffled[index] = shuffled[i];
+            shuffled[i] = temp;
+        }
+        return shuffled.slice(min);
+      } 
+
+      loadData()
+      function loadData() {
+        var questionView = ''
+        for (var i = 0; i <= testData.length - 1; i++) {
+          var answerView = ''
+          for (var index = 0; index <= testData[i].answer.length - 1; index++) {
+            answerView += `<li><input value="${testData[i].answer[index].id}" type="${testData[i].type}" name="${testData[i].type}_${i}"><span>${testData[i].answer[index].text}</span></li>`
+          }
+
+          questionView += `<div class="content">
+              <h2>${i + 1}、 ${testData[i].title}</h2>
+              <ul>
+                ${answerView}
+              </ul>
+          </div>`
+        }
+        $('.questionnaire').html(questionView)
+      }
+
+      function clickReset(e) {
+        var resultView = $('#result').html('')
+      }
+    </script>
+  </body>
+</html>

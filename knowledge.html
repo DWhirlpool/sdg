@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="shortcut icon" href="./images/home/DICIU.jpg" type="image/x-icon" />
+    <meta charset="utf-8" />
+    <title>The SDG Game</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="The SDG Game"
+    />
+    <meta
+      name="keywords"
+      content="SDG, Game, Sustainable, Goals, Development, Sustainable Development Goals, UN, Untied Nations, 6L, Projects, Earth"
+    />
+    <meta content="xxx" name="author" />
+    <!-- FAVICON -->
+
+    <!-- BOOTSTRAP -->
+    <link
+      href="http://cdn.bootstrapmb.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- MAGNIFIC POPUP -->
+    <link href="css/magnific-popup.css" rel="stylesheet" type="text/css" />
+    <!-- ICON -->
+    <link
+      href="css/materialdesignicons.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link href="css/fontawesome.css" rel="stylesheet" type="text/css" />
+    <link href="css/pe-icon-7-stroke.css" rel="stylesheet" type="text/css" />
+    <!--OWL SLIDER-->
+    <link rel="stylesheet" href="css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="css/owl.theme.css" />
+    <link rel="stylesheet" href="css/owl.transitions.css" />
+    <link rel="stylesheet" href="css/slick-theme.css" />
+    <link rel="stylesheet" href="css/slick.css" />
+    <!-- Custom Css -->
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <link href="css/colors/default.css" rel="stylesheet" id="color-opt" />
+  </head>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    html,
+    body {
+      min-height: 100%;
+      height: 100%;
+      /* background-image: url(http://theartmad.com/wp-content/uploads/Dark-Grey-Texture-Wallpaper-5.jpg); */
+      background-size: cover;
+      background-position: top center;
+      font-family: helvetica neue, helvetica, arial, sans-serif;
+      font-weight: 200;
+    }
+    html.modal-active,
+    body.modal-active {
+      overflow: hidden;
+    }
+    #modal-container {
+      position: fixed;
+      display: table;
+      height: 500px;
+      width: 500px;
+      top: calc(50% - 250px + 37px);
+      left: calc(50% - 250px);
+      transform: scale(0);
+      z-index: 1;
+      box-shadow: 0px 3px 0px 0px rgb(0 0 0 / 6%);
+    }
+    #modal-container.one {
+      transform: scaleY(0.01) scaleX(0);
+      animation: unfoldIn 1s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+    }
+    #modal-container.one .modal-background .modal {
+      transform: scale(0);
+      animation: zoomIn 0.5s 0.8s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+    }
+    #modal-container.one.out {
+      transform: scale(1);
+      animation: unfoldOut 1s 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+    }
+    #modal-container.one.out .modal-background .modal {
+      animation: zoomOut 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+    }
+    #modal-container.two {
+      transform: scale(1);
+    }
+    #modal-container.two .modal-background {
+      background: rgba(0, 0, 0, 0);
+      animation: fadeIn 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+    }
+    #modal-container.two .modal-background .modal {
+      opacity: 0;
+      animation: scaleUp 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+    }
+    #modal-container.two + .content {
+      animation: scaleBack 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+    }
+    #modal-container.two.out {
+      animation: quickScaleDown 0s 0.5s linear forwards;
+    }
+    #modal-container.two.out .modal-background {
+      animation: fadeOut 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+    }
+    #modal-container.two.out .modal-background .modal {
+      animation: scaleDown 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+    }
+    #modal-container.two.out + .content {
+      animation: scaleForward 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+    }
+
+    #modal-container.three {
+      transform: scale(1);
+    }
+    #modal-container.three .modal-background {
+      background: rgba(0, 0, 0, 0);
+      animation: fadeIn 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+    }
+    #modal-container.three .modal-background .modal {
+      opacity: 0;
+      animation: scaleUp 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+    }
+    #modal-container.three + .content {
+      animation: scaleBack 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+    }
+    #modal-container.three.out {
+      animation: quickScaleDown 0s 0.5s linear forwards;
+    }
+    #modal-container.three.out .modal-background {
+      animation: fadeOut 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+    }
+    #modal-container.three.out .modal-background .modal {
+      animation: scaleDown 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+    }
+    #modal-container.three.out + .content {
+      animation: scaleForward 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+    }
+
+    #modal-container.four {
+      transform: scale(1);
+    }
+    #modal-container.four .modal-background {
+      background: rgba(0, 0, 0, 0);
+      animation: fadeIn 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+    }
+    #modal-container.four .modal-background .modal {
+      transform: translateX(-1500px);
+      animation: roadRunnerIn 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+    }
+    #modal-container.four.out {
+      animation: quickScaleDown 0s 0.5s linear forwards;
+    }
+    #modal-container.four.out .modal-background {
+      animation: fadeOut 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+    }
+    #modal-container.four.out .modal-background .modal {
+      animation: roadRunnerOut 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+    }
+
+    #modal-container.five {
+      transform: scale(1);
+    }
+    #modal-container.five .modal-background {
+      background: rgba(0, 0, 0, 0);
+      animation: fadeIn 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+    }
+    #modal-container.five .modal-background .modal {
+      transform: translateX(-1500px);
+      animation: roadRunnerIn 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+    }
+    #modal-container.five.out {
+      animation: quickScaleDown 0s 0.5s linear forwards;
+    }
+    #modal-container.five.out .modal-background {
+      animation: fadeOut 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+    }
+    #modal-container.five.out .modal-background .modal {
+      animation: roadRunnerOut 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+    }
+
+    #modal-container.six {
+      transform: scaleY(0.01) scaleX(0);
+      animation: unfoldIn 1s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+    }
+    #modal-container.six .modal-background .modal {
+      transform: scale(0);
+      animation: zoomIn 0.5s 0.8s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+    }
+    #modal-container.six.out {
+      transform: scale(1);
+      animation: unfoldOut 1s 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+    }
+    #modal-container.six.out .modal-background .modal {
+      animation: zoomOut 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+    }
+
+    #modal-container.seven {
+      transform: scale(1);
+    }
+    #modal-container.seven .modal-background {
+      background: rgba(0, 0, 0, 0);
+      animation: fadeIn 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+    }
+    #modal-container.seven .modal-background .modal {
+      height: 75px;
+      width: 75px;
+      border-radius: 75px;
+      overflow: hidden;
+      animation: bondJamesBond 1.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+    }
+    #modal-container.seven .modal-background .modal h2,
+    #modal-container.seven .modal-background .modal p {
+      opacity: 0;
+      position: relative;
+      animation: modalContentFadeIn 0.5s 1.4s linear forwards;
+    }
+    #modal-container.seven.out {
+      animation: slowFade 0.5s 1.5s linear forwards;
+    }
+    #modal-container.seven.out .modal-background {
+      background-color: rgba(0, 0, 0, 0.7);
+      animation: fadeToRed 2s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+    }
+    #modal-container.seven.out .modal-background .modal {
+      border-radius: 3px;
+      height: 162px;
+      width: 227px;
+      animation: killShot 1s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+    }
+    #modal-container.seven.out .modal-background .modal h2,
+    #modal-container.seven.out .modal-background .modal p {
+      animation: modalContentFadeOut 0.5s 0.5 cubic-bezier(0.165, 0.84, 0.44, 1)
+        forwards;
+    }
+    #modal-container .modal-background {
+      display: table-cell;
+      background: rgba(0, 0, 0, 0.8);
+      text-align: center;
+      vertical-align: middle;
+    }
+    #modal-container .modal-background .modal {
+      background: white;
+      padding: 50px;
+      display: inline-block;
+      border-radius: 3px;
+      font-weight: 300;
+      position: relative;
+    }
+    #modal-container .modal-background .modal h2 {
+      font-size: 25px;
+      line-height: 25px;
+      margin-bottom: 15px;
+    }
+    #modal-container .modal-background .modal p {
+      font-size: 18px;
+      line-height: 22px;
+    }
+    #modal-container .modal-background .modal .modal-svg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      border-radius: 3px;
+    }
+    #modal-container .modal-background .modal .modal-svg rect {
+      stroke: #fff;
+      stroke-width: 2px;
+      stroke-dasharray: 778;
+      stroke-dashoffset: 778;
+    }
+    .content {
+      min-height: 100%;
+      height: 100%;
+      background: white;
+      position: relative;
+      z-index: 0;
+    }
+    .content h1 {
+      padding: 75px 0 30px 0;
+      text-align: center;
+      font-size: 30px;
+      line-height: 30px;
+    }
+    .content .buttons {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0;
+      text-align: center;
+    }
+    .content .buttons .button {
+      display: inline-block;
+      text-align: center;
+      padding: 10px 15px;
+      margin: 10px;
+      background: red;
+      font-size: 18px;
+      background-color: #efefef;
+      border-radius: 3px;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+      cursor: pointer;
+    }
+    .content .buttons .button:hover {
+      color: white;
+      background: #009bd5;
+    }
+    @keyframes unfoldIn {
+      0% {
+        transform: scaleY(0.005) scaleX(0);
+      }
+      50% {
+        transform: scaleY(0.005) scaleX(1);
+      }
+      100% {
+        transform: scaleY(1) scaleX(1);
+      }
+    }
+    @keyframes unfoldOut {
+      0% {
+        transform: scaleY(1) scaleX(1);
+      }
+      50% {
+        transform: scaleY(0.005) scaleX(1);
+      }
+      100% {
+        transform: scaleY(0.005) scaleX(0);
+      }
+    }
+    @keyframes zoomIn {
+      0% {
+        transform: scale(0);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+    @keyframes zoomOut {
+      0% {
+        transform: scale(1);
+      }
+      100% {
+        transform: scale(0);
+      }
+    }
+    @keyframes fadeIn {
+      0% {
+        background: rgba(0, 0, 0, 0);
+      }
+      100% {
+        background: rgba(0, 0, 0, 0.7);
+      }
+    }
+    @keyframes fadeOut {
+      0% {
+        background: rgba(0, 0, 0, 0.7);
+      }
+      100% {
+        background: rgba(0, 0, 0, 0);
+      }
+    }
+    @keyframes scaleUp {
+      0% {
+        transform: scale(0.8) translateY(1000px);
+        opacity: 0;
+      }
+      100% {
+        transform: scale(1) translateY(0px);
+        opacity: 1;
+      }
+    }
+    @keyframes scaleDown {
+      0% {
+        transform: scale(1) translateY(0px);
+        opacity: 1;
+      }
+      100% {
+        transform: scale(0.8) translateY(1000px);
+        opacity: 0;
+      }
+    }
+    @keyframes scaleBack {
+      0% {
+        transform: scale(1);
+      }
+      100% {
+        transform: scale(0.85);
+      }
+    }
+    @keyframes scaleForward {
+      0% {
+        transform: scale(0.85);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+    @keyframes quickScaleDown {
+      0% {
+        transform: scale(1);
+      }
+      99.9% {
+        transform: scale(1);
+      }
+      100% {
+        transform: scale(0);
+      }
+    }
+    @keyframes slideUpLarge {
+      0% {
+        transform: translateY(0%);
+      }
+      100% {
+        transform: translateY(-100%);
+      }
+    }
+    @keyframes slideDownLarge {
+      0% {
+        transform: translateY(-100%);
+      }
+      100% {
+        transform: translateY(0%);
+      }
+    }
+    @keyframes moveUp {
+      0% {
+        transform: translateY(150px);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
+    @keyframes moveDown {
+      0% {
+        transform: translateY(0px);
+      }
+      100% {
+        transform: translateY(150px);
+      }
+    }
+    @keyframes blowUpContent {
+      0% {
+        transform: scale(1);
+        opacity: 1;
+      }
+      99.9% {
+        transform: scale(2);
+        opacity: 0;
+      }
+      100% {
+        transform: scale(0);
+      }
+    }
+    @keyframes blowUpContentTwo {
+      0% {
+        transform: scale(2);
+        opacity: 0;
+      }
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+    @keyframes blowUpModal {
+      0% {
+        transform: scale(0);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+    @keyframes blowUpModalTwo {
+      0% {
+        transform: scale(1);
+        opacity: 1;
+      }
+      100% {
+        transform: scale(0);
+        opacity: 0;
+      }
+    }
+    @keyframes roadRunnerIn {
+      0% {
+        transform: translateX(-1500px) skewX(30deg) scaleX(1.3);
+      }
+      70% {
+        transform: translateX(30px) skewX(0deg) scaleX(0.9);
+      }
+      100% {
+        transform: translateX(0px) skewX(0deg) scaleX(1);
+      }
+    }
+    @keyframes roadRunnerOut {
+      0% {
+        transform: translateX(0px) skewX(0deg) scaleX(1);
+      }
+      30% {
+        transform: translateX(-30px) skewX(-5deg) scaleX(0.9);
+      }
+      100% {
+        transform: translateX(1500px) skewX(30deg) scaleX(1.3);
+      }
+    }
+    @keyframes sketchIn {
+      0% {
+        stroke-dashoffset: 778;
+      }
+      100% {
+        stroke-dashoffset: 0;
+      }
+    }
+    @keyframes sketchOut {
+      0% {
+        stroke-dashoffset: 0;
+      }
+      100% {
+        stroke-dashoffset: 778;
+      }
+    }
+    @keyframes modalFadeIn {
+      0% {
+        background-color: transparent;
+      }
+      100% {
+        background-color: white;
+      }
+    }
+    @keyframes modalFadeOut {
+      0% {
+        background-color: white;
+      }
+      100% {
+        background-color: transparent;
+      }
+    }
+    @keyframes modalContentFadeIn {
+      0% {
+        opacity: 0;
+        top: -20px;
+      }
+      100% {
+        opacity: 1;
+        top: 0;
+      }
+    }
+    @keyframes modalContentFadeOut {
+      0% {
+        opacity: 1;
+        top: 0px;
+      }
+      100% {
+        opacity: 0;
+        top: -20px;
+      }
+    }
+    @keyframes bondJamesBond {
+      0% {
+        transform: translateX(1000px);
+      }
+      80% {
+        transform: translateX(0px);
+        border-radius: 75px;
+        height: 75px;
+        width: 75px;
+      }
+      90% {
+        border-radius: 3px;
+        height: 182px;
+        width: 247px;
+      }
+      100% {
+        border-radius: 3px;
+        height: 162px;
+        width: 227px;
+      }
+    }
+    @keyframes killShot {
+      0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(300px) rotate(45deg);
+        opacity: 0;
+      }
+    }
+    @keyframes fadeToRed {
+      0% {
+        background-color: rgba(0, 0, 0, 0.6);
+      }
+      100% {
+        background-color: rgba(255, 0, 0, 0.8);
+      }
+    }
+    @keyframes slowFade {
+      0% {
+        opacity: 1;
+      }
+      99.9% {
+        opacity: 0;
+        transform: scale(1);
+      }
+      100% {
+        transform: scale(0);
+      }
+    }
+  </style>
+  <body>
+    <!-- Loader -->
+    <div id="preloader">
+      <div id="status">
+        <div class="spinner">
+          <div class="cube1"></div>
+          <div class="cube2"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navigation Bar-->
+    <header id="topnav" class="defaultscroll fixed-top navbar-sticky sticky">
+      <div class="container">
+        <!-- Logo container-->
+        <div>
+          <a href="index.html" class="logo">
+            <div class="icon d-inline-block">
+              <img src="images/icon-logo.png" alt="missing_logo" height="20" />
+            </div>
+            The SDG Game
+          </a>
+        </div>
+        <!-- End Logo container-->
+        <div class="menu-extras">
+          <div class="menu-item">
+            <!-- Mobile menu toggle-->
+            <a class="navbar-toggle">
+              <div class="lines">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </a>
+            <!-- End mobile menu toggle-->
+          </div>
+        </div>
+
+        <div id="navigation">
+          <!-- Navigation Menu-->
+          <ul class="navigation-menu">
+            <li class="has-submenu"><a href="./index.html">Home</a></li>
+            <li class="has-submenu">
+              <a href="./game.html">Game</a>
+            </li>
+            <li class="has-submenu">
+              <a href="./test.html">Test</a>
+            </li>
+            <li class="has-submenu">
+              <a href="./knowledge.html">Knowledge</a>
+            </li>
+          </ul>
+          <!-- End navigation menu-->
+        </div>
+      </div>
+    </header>
+    <!-- End Navigation Bar-->
+
+    <!-- Feature Start -->
+    <section class="section">
+      <div class="container pt-5">
+<center><img src="./images/Home/giphy.gif"width="300" height="300" /> </center>
+      </div>
+      <!--end container-->
+    </section>
+    <!--end section-->
+    <!-- Feature End -->
+
+    <div class="container">
+      <div class="row align-items-center mt-5" style="display: block">
+        <!--end col-->
+        <div class="section-title mb-0">
+          <h3 class="title text-capitalize mb-3 text-center">The Collection Of Fun Fact</h3>
+          <center><p class="text-muted">
+            This is the Fact File Page, to read each fact, click on the buttons to read each fact and click ON the fact to dismiss it.
+          </p></centers>
+        </div>
+      </div>
+      <!--end col-->
+    </div>
+
+    <!-- About Start -->
+    <section class="section">
+      <div class="container">
+        <div id="modal-container">
+          <div class="modal-background">
+            <div class="modal"></div>
+          </div>
+        </div>
+        <div class="content">
+          <h1>Knowledge</h1>
+          <div
+            class="buttons knowledgeTitle"
+            style="
+              display: flex;
+              flex-wrap: wrap;
+              align-items: center;
+              justify-content: center;
+            "
+          ></div>
+        </div>
+      </div>
+      <!--end container-->
+    </section>
+    <!--end section-->
+    <!-- About End -->
+
+    <!--end footer-->
+    <!-- Footer End -->
+
+    <!-- Style switcher -->
+    <div
+      id="style-switcher"
+      class="shadow"
+      style="left: 0px"
+      class="p-3 pt-2 pb-2"
+    >
+      <h3 class="title text-center">Select your color</h3>
+      <ul class="pattern">
+        <li>
+          <a class="default" href="#"></a>
+        </li>
+        <li>
+          <a class="blue" href="#"></a>
+        </li>
+        <li>
+          <a class="yellow" href="#"></a>
+        </li>
+        <li>
+          <a class="dark-pink" href="#"></a>
+        </li>
+        <li>
+          <a class="orange" href="#"></a>
+        </li>
+        <li>
+          <a class="brown" href="#"></a>
+        </li>
+        <li>
+          <a class="green" href="#"></a>
+        </li>
+        <li>
+          <a class="purple" href="#"></a>
+        </li>
+        <li>
+          <a class="firozi" href="#"></a>
+        </li>
+      </ul>
+      <div class="bottom">
+        <a href="#" class="settings shadow"
+          ><i class="mdi mdi-settings mdi-spin text-custom"></i
+        ></a>
+      </div>
+    </div>
+    <!-- end Style switcher -->
+
+    <!-- Back to top -->
+    <a href="#" class="back-to-top rounded text-center" id="back-to-top">
+      <i class="mdi mdi-chevron-up d-block"> </i>
+    </a>
+    <!-- Back to top -->
+
+    <!-- javascript -->
+    <script src="js/jquery.min.js"></script>
+    <script src="http://cdn.bootstrapmb.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="js/menu.js"></script>
+    <!-- Magnific Popup -->
+    <script src="js/jquery.magnific-popup.min.js "></script>
+    <!-- SLIDER -->
+    <script src="js/owl.carousel.min.js "></script>
+    <script src="js/owlcarousel.init.js "></script>
+    <script src="js/slick.min.js "></script>
+    <script src="js/slick.init.js "></script>
+    <!-- PARALLAX -->
+    <script src="js/parallax.js"></script>
+    <!-- Switcher -->
+    <script src="js/switcher.js"></script>
+    <!-- Main Js -->
+    <script src="js/app.js"></script>
+    <script>
+      var knowledge = [
+        { id: 'one', title: 'No. 1 Knowledge', content: 'United Nations started the SDGs' },
+        { id: 'two', title: 'No. 2 Knowledge', content: 'The SDG started in 2015 September' },
+        { id: 'three', title: 'No. 3 Knowledge', content: 'The SDG should be acheived by 2030' },
+        { id: 'six', title: 'No. 4 Knowledge', content: 'There are 17 SDGs' },
+        { id: 'two', title: 'No. 5 Knowledge', content: 'The SDG talks not only about nature but peace too' },
+        { id: 'one', title: 'No. 6 Knowledge', content: 'The SDG Goals have smaller goals too (e.g 1.1) ' },
+        { id: 'five', title: 'No. 7 Knowledge', content: 'The SDGs are for goverments but we, also can do a difference. For normal people like US, there is Good Life Goals which are goals that link to the SDGs' },
+        { id: 'one', title: 'No. 8 Knowledge', content: 'The Genral idea of the SDGs are to END PROVETY and SAVE NATURE' },
+        { id: 'five', title: 'No. 9 Knowledge', content: 'The SDG ensures that by 2030 all people enjoy peace and prosperity.' },
+        { id: 'two', title: 'No. 10  Knowledge', content: 'The SDG talks not only about nature but peace too' }
+      ]
+      var knowledgeTitle = document.querySelector('.knowledgeTitle')
+      var modalBox = document.querySelector('.modal')
+
+      var div = ''
+      for (var i = 0; i <= knowledge.length - 1; i++) {
+        div += `<div id="${knowledge[i].id}" title="${knowledge[i].title}" class="button knowledge">${knowledge[i].title}</div>`
+      }
+      $('.knowledgeTitle').html(div)
+
+      $('.button').click(function () {
+        var buttonId = $(this).attr('id')
+        console.log('----------', $(this).prop('title'))
+        var title = $(this).attr('title')
+        var currentData = knowledge.filter((item) => item.title == title)[0]
+        var modalView = `<h2>${currentData.title}</h2>
+              <p>${currentData.content}</p>
+              <svg
+                class="modal-svg"
+                xmlns="http://www.w3.org/2000/svg"
+                width="100%"
+                height="100%"
+                preserveAspectRatio="none"
+              >
+                <rect
+                  x="0"
+                  y="0"
+                  fill="none"
+                  width="226"
+                  height="162"
+                  rx="3"
+                  ry="3"
+                ></rect>
+              </svg>`
+
+        console.log(currentData, modalView)
+        $('.modal').html(modalView)
+        $('#modal-container').removeAttr('class').addClass(buttonId)
+        $('body').addClass('modal-active')
+      })
+
+      $('#modal-container').click(function () {
+        $(this).addClass('out')
+        $('body').removeClass('modal-active')
+      })
+      var items = document.querySelectorAll('.knowledge') //for 循环绑定点击事件
+    </script>
+  </body>
+</html>
